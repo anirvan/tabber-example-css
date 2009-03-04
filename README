@@ -1,0 +1,10 @@
+This is a simplified version of the example CSS files packaged with
+Tabber 1.9 by Patrick Fitzgerald, and distributed under the MIT
+license <http://www.barelyfitz.com/projects/tabber/>.
+
+Read the directions in "tabber.screen.css" to see how to customize the
+tab colors. Don't forget to include links to the CSS files in your
+HTML, like this (make sure the links point to the right URL):
+
+  <link rel="stylesheet" type="text/css" media="screen" href="tabber.screen.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="tabber.print.css" />

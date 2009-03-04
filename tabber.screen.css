@@ -1,0 +1,125 @@
+/* SAMPLE CSS FOR TABBER (SCREEN)
+
+This is a simplified version of the example.css file distributed with
+Tabber 1.9 by Patrick Fitzgerald, and distributed under the MIT
+license <http://www.barelyfitz.com/projects/tabber/>.
+
+Directions:
+
+There are only five colors you need to customize. Each color is
+currently set to the color below. Just find and replace with the color
+of your choice. For example, if you want the main tab background color
+to be white, just find and replace "pink" with "#FFFFFF".
+
+    Active content/tab background = pink
+    Border                        = red
+    Active tab headline           = black
+    Inactive tab background       = lightgray
+    Inactive tab hover            = yellow
+
+ */
+
+/*--------------------------------------------------
+  REQUIRED to hide the non-active tab content.
+  But do not hide them in the print stylesheet!
+  --------------------------------------------------*/
+.tabberlive .tabbertabhide {
+    display:none;
+}
+
+/*--------------------------------------------------
+  .tabber = before the tabber interface is set up
+  .tabberlive = after the tabber interface is set up
+  --------------------------------------------------*/
+.tabber {
+}
+.tabberlive {
+    margin-top:1em;
+}
+
+/*--------------------------------------------------
+  ul.tabbernav = the tab navigation list
+  li.tabberactive = the active tab
+  --------------------------------------------------*/
+ul.tabbernav
+{
+    margin:0;
+    padding: 2px 0;
+    border-bottom: 1px solid red;
+    font-size: 100%;
+    font-weight: bold;
+    text-align: left;
+}
+
+ul.tabbernav li {
+    list-style: none;
+    margin: 0;
+    text-align: left;
+    display: inline;
+}
+
+ul.tabbernav li a {
+    padding: 3px 0.5em;
+    margin-left: 3px;
+    border: 1px solid red;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    background: lightgray;
+    text-decoration: none;
+}
+
+ul.tabbernav li a:hover {
+    color: black;
+    background: yellow;
+    border-bottom: 1px solid pink;
+}
+
+ul.tabbernav li.tabberactive a {
+    color: black;
+    background-color: pink;
+    border-bottom: 1px solid pink;
+}
+
+ul.tabbernav li.tabberactive a:hover {
+    border-bottom: 1px solid pink;
+}
+
+/*--------------------------------------------------
+  .tabbertab = the tab content
+  Add style only after the tabber interface is set up (.tabberlive)
+  --------------------------------------------------*/
+.tabberlive .tabbertab {
+    padding:5px;
+    border:1px solid red;
+    background: pink;
+    text-align: left;
+    border-top:0;
+
+ /* If you don't want the tab size changing whenever a tab is changed
+    you can set a fixed height */
+ /* height:200px; */
+
+ /* If you set a fix height set overflow to auto and you will get a
+    scrollbar when necessary */
+ /* overflow:auto; */
+}
+
+/* If desired, hide the heading since a heading is provided by the tab */
+.tabberlive .tabbertab h2, .tabberlive .tabbertab h3 {
+    display:none;
+}
+
+/* Example of using an ID to set different styles for the tabs on the page */
+/*
+.tabberlive#tab_example_1 { }
+.tabberlive#tab_example_2 { }
+.tabberlive#tab_example_2 .tabbertab {
+    height:200px;
+    overflow:auto;
+}
+*/
